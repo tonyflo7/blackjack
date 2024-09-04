@@ -8,7 +8,7 @@ playtime = input("Ready to play some Blackjack? 'yes' or 'no': ").lower()
 
 while True:
     if playtime == 'yes':
-        print("Let's jiggy.")
+        print("Let's jiggy.\n")
     elif playtime == 'no':
         print("Sounds like you're not ready.")
         print("Maybe next time.")
@@ -63,7 +63,7 @@ while True:
             print("Score of the dealer:", dealer_score)
             print("Cards the player has:", player_card)
             print("Score of the player:", player_score)
-            print("Looks like the dealer wins. The player exceeded a score of 21.")
+            print("Dealer wins. The player because exceeded a score of 21.")
 
         # Logic for dealer to keep drawing card until score is at least 17
         while dealer_score < 17:
@@ -75,4 +75,48 @@ while True:
         print("Score the dealer has:", dealer_score)
         print("\n")
 
-        
+
+    # Determining the winner
+    if dealer_score > 21:
+        print("Cards dealer has:", dealer_card)
+        print("Dealer score is:", dealer_score)
+        print("Cards player has:", player_card)
+        print("Player score is:", player_score)
+        print("Player wins. Dealer loses because score exceeds 21.")
+    elif player_score > 21:
+        print("Cards dealer has:", dealer_card)
+        print("Dealer score is:", dealer_score)
+        print("Cards player has:", player_card)
+        print("Player score is:", player_score)
+        print("Dealer wins. Player loses because score exceeds 21.")
+    elif player_score > dealer_score and player_score < 21:
+        print("Cards dealer has:", dealer_card)
+        print("Dealer score is:", dealer_score)
+        print("Cards player has:", player_card)
+        print("Player score is:", player_score)
+        print("Player wins. Player had higher score than dealer under 21.")
+    elif dealer_score > player_score and dealer_score < 21:
+        print("Cards dealer has:", dealer_card)
+        print("Dealer score is:", dealer_score)
+        print("Cards player has:", player_card)
+        print("Player score is:", player_score)
+        print("Dealer wins. Dealer has higher score than player under 21.")
+    elif player_score == 21:
+        print("Cards dealer has:", dealer_card)
+        print("Dealer score is:", dealer_score)
+        print("Cards player has:", player_card)
+        print("Player score is:", player_score)
+        print("Player wins. Player score equals 21.")
+    elif dealer_score == 21:
+        print("Cards dealer has:", dealer_card)
+        print("Dealer score is:", dealer_score)
+        print("Cards player has:", player_card)
+        print("Player score is:", player_score)
+        print("Dealer wins. Dealer score equals 21.")
+    else:
+        print("Cards dealer has:", dealer_card)
+        print("Dealer score is:", dealer_score)
+        print("Cards player has:", player_card)
+        print("Player score is:", player_score)
+        print("It's a tie.")
+    break
