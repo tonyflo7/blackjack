@@ -1,4 +1,4 @@
-# This game is created with the intention of getting experience for a better job.
+# This game is created with the intention of helping Python beginners.
 # Game of Blackjack (objective of the player is to have a sum of 21 or less)
 
 import random
