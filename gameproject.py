@@ -76,7 +76,7 @@ while True:
         print("\n")
 
 
-    # Determining the winner
+    # Determining the winner with all outcomes
     if dealer_score > 21:
         print("Cards dealer has:", dealer_card)
         print("Dealer score is:", dealer_score)
